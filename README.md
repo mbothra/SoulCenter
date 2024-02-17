@@ -48,15 +48,30 @@ SoulCenter.ai leverages cutting-edge technology and a deep understanding of huma
 
 1.	Clone the repository
 
-[ add code]
+git clone https://github.com/mbothra/SoulCenter.git
 
-2.	Create a python environment
-[add code]
+2.	Set up keys in .env file
 
-3.	Install the required dependencies
-[add code]
+OPENAI_API_KEY=sk-[]
+BASETEN_API_KEY=[]
+ELEVENLABS_API_KEY=[]
+AWS_ACCESS_KEY_ID=[]
+AWS_SECRET_ACCESS_KEY=[]
 
-4.	Set up keys in .env file
+3.	Create a python environment and run Flask Server
+
+cd SoulCenter
+python -m venv <virtual environment name>
+source venv/bin/activate
+pip install -r requirements.txt
+python app.py
+
+4.	Install the required frontend dependencies
+
+cd meditation-frontend
+npm install
+npm run start
+
 
 ## Challenges we ran into
 
