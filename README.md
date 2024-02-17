@@ -52,25 +52,25 @@ git clone https://github.com/mbothra/SoulCenter.git
 
 2.	Set up keys in .env file
 
-OPENAI_API_KEY=sk-[]
-BASETEN_API_KEY=[]
-ELEVENLABS_API_KEY=[]
-AWS_ACCESS_KEY_ID=[]
-AWS_SECRET_ACCESS_KEY=[]
+OPENAI_API_KEY=sk-[] \n
+BASETEN_API_KEY=[] \n
+ELEVENLABS_API_KEY=[] \n
+AWS_ACCESS_KEY_ID=[] \n
+AWS_SECRET_ACCESS_KEY=[] \n
 
 3.	Create a python environment and run Flask Server
 
-cd SoulCenter
-python -m venv <virtual environment name>
-source venv/bin/activate
-pip install -r requirements.txt
-python app.py
+cd SoulCenter \n
+python -m venv <virtual environment name> \n
+source venv/bin/activate \n
+pip install -r requirements.txt \n
+python app.py \n
 
 4.	Install the required frontend dependencies
 
-cd meditation-frontend
-npm install
-npm run start
+cd meditation-frontend \n
+npm install \n
+npm run start \n
 
 ## Architecture
 
