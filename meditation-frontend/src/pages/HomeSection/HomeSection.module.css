@@ -1,0 +1,54 @@
+.main {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.feelingInputContainer {
+    margin-top: 20px; /* Adjust as needed */
+    text-align: center;
+}
+
+.feelingInput {
+    width: 60%; /* Adjust width as desired */
+    padding: 10px 15px;
+    font-size: 18px; /* Adjust font size as needed */
+    border: 2px solid #ccc; /* Minimalist border */
+    border-radius: 20px; /* Soft rounded corners for the input */
+    outline: none; /* Remove focus outline */
+    transition: border-color 0.3s;
+}
+
+.feelingInput:focus {
+    border-color: #007bff; /* Highlight color when input is focused */
+}
+
+.miniInputsContainer {
+    display: flex;
+    justify-content: space-around; /* Evenly space the smaller inputs */
+    margin-top: 20px; /* Space from the feeling input */
+}
+
+.miniInput {
+    width: 30%; /* Adjust based on your layout */
+    padding: 8px 10px;
+    font-size: 16px; /* Slightly smaller font size */
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    outline: none;
+}
+
+.miniInput:focus {
+    border-color: #007bff;
+}
