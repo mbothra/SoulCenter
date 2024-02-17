@@ -1,115 +1,82 @@
-<p align="center">
-  
-  <h3 align="center">SoulCenter.ai</h3>
+# SoulCenter.ai
 
-  <p align="center">
-    A simply website to facilitate meditation, built with React. </p>
+## Inspiration
 
-  <br>
-  <br>
+In a world increasingly burdened by stress and anxiety, the quest for mental wellness has never been more critical. Yet, many individuals find themselves alienated by the one-size-fits-all approach of existing meditation apps. These solutions often fail to address the unique, personal nature of stress and anxiety, leaving users feeling disconnected and unsupported. In-person personalized sessions are often prohibitively expensive. 
 
-  <a href="https://github.com/claudiovarzi/meditation-app">
-    <img src="src/assets/img/home_screenshot.jpg" alt="calmly-screenshot">
-  </a>
-</p>
+Presenting **SoulCenter.ai**: an innovation in personal well-being and mindfulness, a meditation experience so uniquely tailored, it feels like a journey crafted just for you, by you. Imagine stepping into a world where meditation isn't just a practice but a deeply personal voyage, meticulously designed around your emotions, your environment, and even your voice preferences.
 
-<details open="open">
-  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#links-contacts">Links & Contacts</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
-  </ol>
-</details>
+Our mission is to democratize access to personalized meditation, recognizing the diverse challenges individuals face, including time constraints, cost barriers, and the quest for a truly intuitive experience. SoulCenter.ai is not just a platform; it's a movement towards a more empathetic, inclusive, and personalized approach to mental wellness.
 
-## About The Project
+## What it does
 
-This is a simply meditation website made to facilitate meditation practice and let the user expand his knowledge about this ancient but current topic. Information and details are the result of personal research and practice.
-User can explore four main routes:
+Our platform now includes enhanced features that cater to a wider array of user preferences and needs:
 
-<ul>
-<li>the <strong>Home page</strong>, </li>
+- **Expressive Empathy Sessions**: Users can share their emotions, mental state, and personal preferences, including voice (male, female) and accent (British, Indian, African etc.), enabling the creation of sessions that deeply resonate on a personal level.
+- **Voice personalization**: Users can share their voice preference, including accent that creates a meditation experience that deeply resonates with them.
+- **Inclusive Customization**: Acknowledging the importance of accessibility, users can specify any disabilities or situational constraints (e.g., being in a car), ensuring that every session is not only personalized but also accessible and safe for their specific circumstances.
+- **AI-Powered Personalization**: With advanced natural language processing from ChatGPT, SoulCenter.ai adapts to a broad spectrum of emotions, preferences, and user-specific requirements, offering an unmatched level of personalization in meditation content.
+- **Flexible Session Lengths**: We recognize the demands of modern life and offer meditation sessions of varying lengths to fit into any schedule, ensuring there's always time for mental wellness.
+- **Accessibility and Affordability**: Our online platform breaks down financial and physical barriers to accessing quality meditation guidance, making it widely accessible to everyone.
+- **Simple and Intuitive Interface**: Designed with the user's ease in mind, SoulCenter.ai facilitates a stress-free navigation experience, guiding users seamlessly to their personalized meditation session.
+- **Revisiting Past Sessions**: Users can easily access and revisit their previous meditation sessions, fostering a sense of continuity and deepening their meditation practice over time.
+- **Feedback Loop**: At the end of each meditation session, users are encouraged to provide feedback on their experience. This invaluable input allows us to continuously refine and improve our offerings, ensuring that SoulCenter.ai evolves in response to the needs of our community.
 
-<li>the <strong>Why section</strong>, which contains the 13 biggest benefits of meditation, </li>
+## How we built it
 
-<li>the <strong>How section</strong>, which explains the principal steps to practice meditation, </li>
+SoulCenter.ai leverages cutting-edge technology and a deep understanding of human psychology to offer a revolutionary platform for mental wellness:
 
-<li>the <strong>Meditate section</strong>, which lets the user setup his meditation session with background sounds and duration, and start the meditation timer. </li>
-</ul>
+- **Enhanced User Input**: We've expanded our user input capabilities to include emotional states, preferences for voice and accent, disabilities, and environmental constraints, ensuring a highly tailored meditation experience.
+- **Backend Complexity, Frontend Simplicity**: Our backend algorithms have been intricately designed to process a wide range of user inputs while maintaining a simple and serene frontend experience.
+- **Comprehensive AI Integration**: Using ChatGPT for dynamic content creation and incorporating Elevenlabs’ text-to-speech technologies that cater to diverse accents and voice preferences, we ensure every meditation session is both personalized and engaging.
+- **Robust Cloud Infrastructure**: Our use of AWS has been optimized for scalability and efficiency, managing a vast library of unique meditation sessions accessible from anywhere, at any time.
 
-### Built With
+## Requirements
 
-- [React](https://it.reactjs.org/)
-- [react-router-dom-v6](https://reactrouter.com/docs/en/v6/upgrading/v5)
-- [CSS modules](https://github.com/css-modules/css-modules)
-- [react-responsive](https://www.npmjs.com/package/react-responsive)
-- [react-icons](https://react-icons.github.io/react-icons/)
-- [react-country-flag](https://github.com/danalloway/react-country-flag)
-- [react-i18next](https://react.i18next.com/)
+1. Python 3.6 or higher
+2. OpenAI open source models
+3. Baseten open source model
+4. Python Numpy
+5. Python Soundfile to read and write soundfiles
+6. Python os for pathname manipulations
+7. Python re for regular expression support
+8. Python base64 for data encoding
+9. ElevenLabs open source customized voice models
+10. Python librosa for music and audio analysis
 
-## Getting Started
+## Setup
 
-### Prerequisites
+1.	Clone the repository
 
-Running the application requires [Node](https://nodejs.org/en/) to be installed on your operating system.
+[ add code]
 
-You can then install the latest version of npm from your terminal with the command:
+2.	Create a python environment
+[add code]
 
-```sh
-npm install npm@latest -g
-```
+3.	Install the required dependencies
+[add code]
 
-### Installation
+4.	Set up keys in .env file
 
-1. Clone the repository locally with the git command:
+## Challenges we ran into
 
-   ```sh
-   git clone https://github.com/claudiovarzi/meditation-app
-   ```
+1. Identifying right voice manipulations for our use case of meditation.
+2. Ensuring generation of background music with limited latency.
+3. Merging voice and background music into a single audio file.
+4. Prompting LLM in a manner that captures all of users' inputs and feelings and incorporates those into personalized meditation scripts.
 
-2. Install NPM packages:
+## Accomplishments that we're proud of
 
-   ```sh
-   npm install
-   ```
+- **Positive User Impact**: Early feedback from our enhanced platform has been overwhelmingly positive, with users expressing appreciation for the depth of personalization and the inclusivity of our offerings.
+- **Unparalleled Personalization**: We've set a new standard in personalized meditation, successfully incorporating a wide range of user preferences and needs into our sessions.
+- **Technological Innovation**: Our advancements in AI and text-to-speech technology have enabled us to offer a truly inclusive and accessible platform.
 
-3. Run the app with command:
+## What we learned
 
-   ```sh
-   npm start
-   ```
+This journey has reinforced the importance of listening to our users and continuously innovating to meet their diverse needs. It has shown us the power of technology to transform lives when applied with empathy and understanding.
 
-## License
+## What's next for SoulCenter.ai
 
-Distributed under the MIT License. See `LICENSE` for more information.
-
-## Links & Contacts
-
-Project Repository: [meditation-app](https://github.com/claudiovarzi/meditation-app)
-
-Project Website: [Calmly - Netlify](https://calmly.netlify.app/)
-
-## Acknowledgements
-
-- [React](https://it.reactjs.org/)
-- [CSS modules](https://github.com/css-modules/css-modules)
-- [react-router-dom-v6](https://reactrouter.com/docs/en/v6/upgrading/v5)
-- [react-icons](https://react-icons.github.io/react-icons/)
-- [react-responsive](https://www.npmjs.com/package/react-responsive)
-- [react-country-flag](https://github.com/danalloway/react-country-flag)
-- [react-i18next](https://react.i18next.com/)
-- [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
-- [Awesome README](https://github.com/matiassingers/awesome-readme)
+- **Further Personalization**: We plan to introduce even more customization options, allowing users to tailor their meditation experiences to an even finer degree.
+- **Community Engagement**: Developing features that enable users to connect and share their meditation experiences, fostering a supportive community around mental wellness.
+- **Global Expansion**: We aim to make SoulCenter.ai available in multiple languages, reaching a global audience and bringing personalized meditation to users worldwide.
