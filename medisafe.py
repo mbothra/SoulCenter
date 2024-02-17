@@ -1,26 +1,23 @@
-import openai
+from openai import OpenAI
 import pyttsx3
 from pydub import AudioSegment
 import os
 
-# Replace 'your_openai_api_key' with your actual OpenAI API key
-openai.api_key = 'your_openai_api_key'
+client = OpenAI(api_key = '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')
 
+# Replace 'your_openai_api_key' with your actual OpenAI API key
 def generate_meditation_script(description, duration):
     """
     Generates a meditation script based on the user's mood and desired duration.
     """
-    prompt = f"Create a guided meditation script for {duration} minutes based on the mood: {description}"
-    response = openai.Completion.create(
-        engine="text-davinci-003",  # or whichever is the latest and most appropriate for your use case
-        prompt=prompt,
-        temperature=0.7,
-        max_tokens=1000,  # Adjust based on the expected script length
-        top_p=1.0,
-        frequency_penalty=0.0,
-        presence_penalty=0.0
-    )
-    return response.choices[0].text.strip()
+    prompt = f"Create a guided meditation script for {duration} minutes based on the mood: {description} with pauses integrated"
+    messages = [
+    # system message to set the behavior of the assistant
+            {"role": "system", "content": "Hi ChatGPT, You are a Meditation guru!"},
+            {"role": "user", "content": prompt},
+        ]
+    response = client.chat.completions.create(model="gpt-3.5-turbo", messages=messages)
+    return response.choices[0].message.content.strip()
 
 def text_to_speech(text, filename):
     """
