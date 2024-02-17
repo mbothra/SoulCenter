@@ -72,6 +72,10 @@ cd meditation-frontend
 npm install
 npm run start
 
+## Architecture
+
+![WhatsApp Image 2024-02-17 at 16 25 08 (1)](https://github.com/mbothra/SoulCenter/assets/66191235/b6a5c8f4-94b5-4943-9955-92877485e4fe)
+
 
 ## Challenges we ran into
 
